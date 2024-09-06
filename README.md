@@ -1,6 +1,6 @@
 # 🚀 React Infinite Horizontal Scroll ➡️
 
-This is a simple React application that implements infinite horizontal scrolling ♾️. As users scroll, new items are dynamically loaded, offering a seamless and efficient browsing experience 🎨.
+This is a simple React application that implements infinite horizontal card scrolling ♾️. When the user hovers over the component, the scrolling pauses offering a seamless and efficient browsing experience 🎨.
 
 ## 🛠️ Features
 - Infinite horizontal scrolling 🚀
