@@ -16,7 +16,7 @@ export default {
       },
       keyframes: {
         horizontalScroll:{
-          '0%': { transform: 'translateX(0%)' },
+          '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
         }
       },
