@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
+
 const SingleSlider = ({users}) => {
     const [slider1AnimationStyles, setSlider1AnimationStyles] = useState({});
+    const [slider2AnimationStyles, setSlider2AnimationStyles] = useState({});
     const [slider1, setSlider1] = useState([]);
     const [slider2, setSlider2] = useState([]);
 
@@ -14,6 +16,13 @@ const SingleSlider = ({users}) => {
             animationDuration: `220s`,
             animationTimingFunction: `linear`,
             animationDelay: `0s`,
+            AnimationTimeline: `infinite`,
+        })
+        setSlider2AnimationStyles({
+            animationDuration: `220s`,
+            animationTimingFunction: `linear`,
+            animationDelay: `0s`,
+            AnimationTimeline: `infinite`,
         })
     }, [])
     
@@ -36,7 +45,7 @@ const SingleSlider = ({users}) => {
         </div>
       ))}
     </div>
-   <div className="flex h-fit">
+   <div style={slider2AnimationStyles} className="flex h-fit animate-[horizontalScroll]">
    {slider2.map((user, index) => (
       <div key={index} className=" items-center bg-slate-800 mx-2 rounded-xl">
         <div className="flex flex-col items-start justify-start p-4rounded-lg m-4 w-[400px]">
