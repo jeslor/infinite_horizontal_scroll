@@ -21,7 +21,7 @@ export default {
         }
       },
       animation:{
-        horizontalScroll:"horizontalScroll 100s infinite"
+        horizontalScroll:"horizontalScroll"
       }
     },
   },

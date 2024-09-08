@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const SingleSlider = ({users}) => {
+    const [animationStyles, setAnimationStyles] = useState({
+
+    });
+
+    useEffect(() => {
+
+
+        setAnimationStyles({
+            animationDuration: `150s`,
+            animationTimingFunction: `linear`,
+
+        })
+    }, [])
+    
+
+
+    
   return (
-    <div className="flex flex-1 gap-y-3 pt-[4rem] animate-[horizontalScroll_100s_ease_infinite] w-fit">
+    <div style={animationStyles} className="flex flex-1 gap-y-3 pt-[4rem] animate-[horizontalScroll] w-fit">
     {users.map((user, index) => (
       <div key={index} className=" items-center bg-slate-800 mx-2 rounded-xl">
         <div className="flex flex-col items-start justify-start p-4rounded-lg m-4 w-[400px]">
