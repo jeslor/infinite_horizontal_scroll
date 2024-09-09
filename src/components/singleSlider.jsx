@@ -14,12 +14,12 @@ const SingleSlider = ({users, direction}) => {
       setSlider2(users.slice(users.length / 2, users.length))
 
       setSlider1AnimationStyles({
-            animationDuration: `150s`,
+            animationDuration: `200s`,
             animationTimingFunction: `linear`,
             animationIterationCount: `infinite`,
         })
         setSlider2AnimationStyles({
-            animationDuration: `150s`,
+            animationDuration: `200s`,
             animationTimingFunction: `linear`,
             animationIterationCount: `infinite`
         })

@@ -16,11 +16,11 @@ export default {
       },
       keyframes: {
         horizontalScrollLeft:{
-          to: { transform: 'translate(calc(-50%))'},
+          to: { transform: 'translate(calc(-50% - 0.5rem))'},
         },
         horizontalScrollRight:{
           from:({ transform: 'translate(calc(-50%))'}),
-          to: { transform: 'translate(calc(0%))'},
+          to: { transform: 'translate(calc(0% - 0.5rem))'},
         }
       },
       animation:{
