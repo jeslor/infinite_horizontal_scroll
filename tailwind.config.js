@@ -19,13 +19,12 @@ export default {
           to: { transform: 'translate(calc(-50% - 0.5rem))'},
         },
         horizontalScrollRight:{
-          from:({ transform: 'translate(calc(-50%))'}),
-          to: { transform: 'translate(calc(0% - 0.5rem))'},
+          to: { transform: 'translate(calc(-50% - 0.5rem))'},
         }
       },
       animation:{
-        horizontalScrollLeft:"horizontalScrollLeft",
-        horizontalScrollRight:"horizontalScrollRight"
+        horizontalScrollLeft:"horizontalScrollLeft 200s linear infinite forwards",
+        horizontalScrollRight:"horizontalScrollRight 200s linear infinite reverse",
       }
     },
   },
