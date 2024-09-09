@@ -15,13 +15,16 @@ export default {
         'auto-fit-100': 'repeat(auto-fit, minmax(100px, 1fr))',
       },
       keyframes: {
-        horizontalScroll:{
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' },
+        horizontalScrollLeft:{
+          to: { transform: 'translate(calc(-50%))'},
+        },
+        horizontalScrollRight:{
+          to: { transform: 'translate(calc(50% + 0.5rem))'},
         }
       },
       animation:{
-        horizontalScroll:"horizontalScroll"
+        horizontalScrollLeft:"horizontalScrollLeft",
+        horizontalScrollRight:"horizontalScrollRight"
       }
     },
   },

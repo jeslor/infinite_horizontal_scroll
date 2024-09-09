@@ -1,0 +1,17 @@
+.animateMe {
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: horizontalScroll 2s infinite;
+}
+
+@keyframes horizontalScroll {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}

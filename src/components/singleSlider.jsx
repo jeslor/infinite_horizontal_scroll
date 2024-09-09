@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from 'react'
 
 
-const SingleSlider = ({users}) => {
+const SingleSlider = ({users, direction, startIndex}) => {
     const [slider1AnimationStyles, setSlider1AnimationStyles] = useState({});
     const [slider2AnimationStyles, setSlider2AnimationStyles] = useState({});
     const [slider1, setSlider1] = useState([]);
     const [slider2, setSlider2] = useState([]);
+    const [animationDirection, setAnimationDirection] = useState(null)
 
     useEffect(() => {
-
-      setSlider1(users.slice(0, users.length / 2))
+      setAnimationDirection(direction)
+      setSlider1(users.slice(startIndex, users.length / 2))
       setSlider2(users.slice(users.length / 2, users.length))
 
       setSlider1AnimationStyles({
-            animationDuration: `220s`,
+            animationDuration: `150s`,
             animationTimingFunction: `linear`,
-            animationDelay: `0s`,
-            AnimationTimeline: `infinite`,
+            animationIterationCount: `infinite`,
         })
         setSlider2AnimationStyles({
-            animationDuration: `220s`,
+            animationDuration: `150s`,
             animationTimingFunction: `linear`,
-            animationDelay: `0s`,
-            AnimationTimeline: `infinite`,
+            animationIterationCount: `infinite`
         })
     }, [])
     
@@ -30,11 +29,11 @@ const SingleSlider = ({users}) => {
 
     
   return (
-    <div className="flex flex-1 gap-y-3 pt-[4rem] w-fit">
-    <div style={slider1AnimationStyles}  className="flex h-fit animate-[horizontalScroll] ">
+    <div style={{mask:"linear-gradient(90deg, transparent, white 10%, white 80%, transparent 98%)"}} className="flex flex-1 py-[2rem] w-[90vw] mx-auto">
+    <div style={slider1AnimationStyles}  className={`flex h-fit ${animationDirection==='left'&&'animate-[horizontalScrollLeft] left-0'} ${animationDirection==='right'&&'animate-[horizontalScrollRight]'} w-max flex-nowrap gap-4 `}>
     {slider1.map((user, index) => (
-        <div key={index} className=" items-center bg-slate-800 mx-2 rounded-xl">
-          <div className="flex flex-col items-start justify-start p-4rounded-lg m-4 w-[400px]">
+        <div key={index} className=" items-center bg-slate-800 rounded-xl  px-6 py-4">
+          <div className="flex flex-col items-start justify-start p-4rounded-lg w-[400px]">
             <div className='flex flex-col'>
             <img src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt={user.username} className="w-10 h-10 rounded-full" />
             <small className="text-slate-600">{user.username}</small>
@@ -44,11 +43,9 @@ const SingleSlider = ({users}) => {
           </div>
         </div>
       ))}
-    </div>
-   <div style={slider2AnimationStyles} className="flex h-fit animate-[horizontalScroll]">
    {slider2.map((user, index) => (
-      <div key={index} className=" items-center bg-slate-800 mx-2 rounded-xl">
-        <div className="flex flex-col items-start justify-start p-4rounded-lg m-4 w-[400px]">
+      <div key={index} className=" bg-slate-800 rounded-xl  px-6 py-4">
+        <div className="flex flex-col items- justify-start p-4rounded-lg w-[400px]">
           <div className='flex flex-col'>
           <img src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt={user.username} className="w-10 h-10 rounded-full" />
           <small className="text-slate-600">{user.username}</small>
