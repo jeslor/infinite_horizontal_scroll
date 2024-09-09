@@ -35,7 +35,7 @@ const SingleSlider = ({users, direction}) => {
         <div key={index} className=" items-center bg-slate-800 rounded-xl  px-6 py-4">
           <div className="flex flex-col items-start justify-start p-4rounded-lg w-[400px]">
             <div className='flex flex-col'>
-            <img src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt={user.username} className="w-10 h-10 rounded-full" />
+            <img src="/images/user.webp" alt={user.username} className="w-10 h-10 rounded-full opacity-40" />
             <small className="text-slate-600 font-bold">{user.username}</small>
             </div>
             <h2 className="text-xl text-slate-100 font-semibold mt-4">{`${user.first_name} ${user.last_name}`}</h2>
@@ -47,7 +47,7 @@ const SingleSlider = ({users, direction}) => {
       <div key={index} className=" bg-slate-800 rounded-xl  px-6 py-4">
         <div className="flex flex-col items- justify-start p-4rounded-lg w-[400px]">
           <div className='flex flex-col'>
-          <img src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt={user.username} className="w-10 h-10 rounded-full" />
+          <img src="/images/user.webp" alt={user.username} className="w-10 h-10 rounded-full opacity-40" />
           <small className="text-slate-600 font-bold">{user.username}</small>
           </div>
           <h2 className="text-xl text-slate-100 font-semibold mt-2">{`${user.first_name} ${user.last_name}`}</h2>
