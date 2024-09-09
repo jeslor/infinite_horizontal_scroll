@@ -19,7 +19,8 @@ export default {
           to: { transform: 'translate(calc(-50%))'},
         },
         horizontalScrollRight:{
-          to: { transform: 'translate(calc(50% + 0.5rem))'},
+          from:({ transform: 'translate(calc(-50%))'}),
+          to: { transform: 'translate(calc(0%))'},
         }
       },
       animation:{
