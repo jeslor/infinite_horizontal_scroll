@@ -30,7 +30,7 @@ const SingleSlider = ({users, direction}) => {
     
   return (
     <div style={{mask:"linear-gradient(90deg, transparent, white 10%, white 80%, transparent 98%)"}} className="flex flex-1 py-[2rem] w-[90vw] mx-auto">
-    <div className={`flex h-fit ${animationDirection==='left'&&'animate-[horizontalScrollLeft_200s_linear_infinite_forwards] '} ${animationDirection==='right'&&'animate-[horizontalScrollRight_200s_linear_infinite_reverse]'} w-max flex-nowrap gap-4 `}>
+    <div className={`flex h-fit ${animationDirection==='left'&&'animate-[horizontalScrollLeft_200s_linear_infinite_forwards] '} ${animationDirection==='right'&&'animate-[horizontalScrollRight_200s_linear_infinite_reverse]'} hover:[animation-play-state:paused] w-max flex-nowrap gap-4 `}>
     {slider1.map((user, index) => (
         <div key={index} className=" items-center bg-slate-800 rounded-xl  px-6 py-4">
           <div className="flex flex-col items-start justify-start p-4rounded-lg w-[400px]">
