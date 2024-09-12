@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 
 const SingleSlider = ({users, direction}) => {
-    const [slider1AnimationStyles, setSlider1AnimationStyles] = useState({});
-    const [slider2AnimationStyles, setSlider2AnimationStyles] = useState({});
     const [slider1, setSlider1] = useState([]);
     const [slider2, setSlider2] = useState([]);
     const [animationDirection, setAnimationDirection] = useState(null)
@@ -13,16 +11,6 @@ const SingleSlider = ({users, direction}) => {
       setSlider1(users.slice( users.length / 2))
       setSlider2(users.slice(users.length / 2, users.length))
 
-      setSlider1AnimationStyles({
-            animationDuration: `200s`,
-            animationTimingFunction: `linear`,
-            animationIterationCount: `infinite`,
-        })
-        setSlider2AnimationStyles({
-            animationDuration: `200s`,
-            animationTimingFunction: `linear`,
-            animationIterationCount: `infinite`
-        })
     }, [])
     
 
