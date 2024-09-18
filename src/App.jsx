@@ -30,6 +30,10 @@ function App() {
           <p className="py-7 max-w-[1000px] w-full  mx-auto text-slate-500 text-center text-lg font-medium">
             This is a simple React application that implements infinite horizontal card scrolling ♾️. When the user hovers over the component, the scrolling pauses offering a seamless and efficient browsing experience 🎨.
           </p>
+          <div>
+            <button>Left</button>
+            <button>right</button>
+          </div>
          <div className="pt-10">
           <SingleSlider users={users.slice(0,10)} direction="left" />
           <SingleSlider users={users.slice(10,20)}  direction="right" />
