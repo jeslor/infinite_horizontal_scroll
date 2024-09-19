@@ -11,7 +11,17 @@ function App() {
 
 
 
-  const handleDirections  = () => {
+  const handleDirections  = (activeButton) => {
+    if (activeButton === 'left') {
+      setSlider1Direction('left')
+      setSlider2Direction('left')
+    }else if (activeButton === 'right') {
+      setSlider1Direction('right')
+      setSlider2Direction('right')
+    }else {
+      setSlider1Direction('left')
+      setSlider2Direction('right')
+    }
   }
 
 
