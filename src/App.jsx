@@ -5,6 +5,15 @@ import SingleSlider from './components/singleSlider'
 
 function App() {
   const [loadedUsers, setLoadedUsers] = useState(users)
+  const [slider1Direction, setSlider1Direction] = useState('left')
+  const [slider2Direction, setSlider2Direction] = useState('right')
+  const [isReset, setIsReset] = useState(false)
+
+
+
+  const handleDirections  = () => {
+  }
+
 
 
   useEffect(() => {
@@ -31,8 +40,9 @@ function App() {
             This is a simple React application that implements infinite horizontal card scrolling ♾️. When the user hovers over the component, the scrolling pauses offering a seamless and efficient browsing experience 🎨.
           </p>
           <div className='flex justify-center'>
-            <button className='px-8 py-3 bg-slate-300 mx-2 rounded-s-xl font-semibold text-slate-900 hover:bg-slate-400 transition-all'>Left</button>
-            <button className='px-8 py-3 bg-slate-300 mx-2 rounded-e-xl font-semibold text-slate-900 hover:bg-slate-400 transition-all'>right</button>
+            <button onClick={handleDirections} className='px-8 py-3 bg-slate-300 mx-2 rounded-s-xl font-semibold text-slate-900 hover:bg-slate-400 transition-all'>Left</button>
+            <button onClick={handleDirections} className='px-8 py-3 bg-slate-300 mx-2  font-semibold text-slate-900 hover:bg-slate-400 transition-all'>Reset</button>
+            <button onClick={handleDirections} className='px-8 py-3 bg-slate-300 mx-2 rounded-e-xl font-semibold text-slate-900 hover:bg-slate-400 transition-all'>Right</button>
           </div>
          <div className="pt-10">
           <SingleSlider users={users.slice(0,10)} direction="left" />
